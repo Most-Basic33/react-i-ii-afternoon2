@@ -13,18 +13,20 @@ class App extends Component {
     super(props);
     this.state = {
       counter:1,
-      count:1
+      array:Data
     
 
     }
   }
-  // handleRemove=(e)=>{
-    // const remove = Data.splice(this.state.counter,1);
-    // console.log(remove,"this is remove");
-  //   this.setState({
-  //     counter:this.state.counter-1
-  //   })
-  // }
+  handleRemove=(id)=>{
+    alert('Item deleted')
+    const remove = this.state.array.filter(element => element.id !==id) 
+    console.log(remove,'remove')
+    this.setState({
+      array:remove,
+      counter:this.state.counter+1
+    })
+  }
   
     handleClick=(e)=>{
      this.setState({
@@ -54,7 +56,7 @@ class App extends Component {
       <Header count={counter} />
       <Card output={output}/>
       <button onClick={(e)=> this.handleClick(e)}>Switch People</button>
-        <button onClick={(e)=>this.handleRemove(e) }>Remove People</button>  
+        <button onClick={()=>this.handleRemove(this.state.counter) }>Remove People</button>  
         </div>
        </section>
        
