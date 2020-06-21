@@ -4,7 +4,7 @@ class Form extends Component{
 constructor(props){
     super(props);
     this.state ={
-        id:this.props.counter,
+        id:Data.length,
         fname:'',lname:'',
         city:'',
         country:'',
@@ -16,15 +16,23 @@ constructor(props){
         newPerson:Data
     }
 }
-addAppt=(info)=>{
-    let newArray = [...Data]
-    Data.push(info);
-    newArray.push(info)
+addAppt=()=>{
+    //console.log(info,'info addAppt fnc')
+    const name = {first:this.state.fname,last:this.state.lname }
+    const movie = [this.state.favoriteMovies1,this.state.favoriteMovies2,this.state.favoriteMovies3]
+const {city,country,employer,title } = this.state
+    const newArray = [...Data]
+   
+    newArray.push({name,movie,city,country,employer,title})
+    Data.push(newArray)
+    console.log(newArray,"new array");
     this.setState({
         newPerson: newArray
     })
 
 }
+//remove info as a parameter, and remove this.state from parmeter of addAppt
+//
 handleChage=(e)=>{
     console.log(e.target.value)
     this.setState({
@@ -33,7 +41,7 @@ handleChage=(e)=>{
 }
 handleSubmit =(e)=>{
     e.preventDefault();
-  this.addAppt(this.state)
+  this.addAppt()
   this.setState({
       fname:'',
       lname:'',
@@ -118,8 +126,8 @@ render(){
                 onChange={this.handleChage}
             />
             <button>Add Person</button>
-            {console.log(this.state)}
-            {console.log(this.state.newPerson)}
+            {/* {console.log(this.state)}
+            {console.log(this.state.newPerson)} */}
             
         </form>
     )
