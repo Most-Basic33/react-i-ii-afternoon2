@@ -49,6 +49,14 @@ button{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+.form{
+  height: auto;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+}
 
 
 

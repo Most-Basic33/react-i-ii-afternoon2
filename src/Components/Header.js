@@ -1,12 +1,14 @@
  import  React  from 'react';
+import Data from './Data';
+import Form from './Form';
 
  const Header = (props) => {
-     //console.log(props)
+     console.log(Form.newPerson)
      return(
          
          <header className='headPiece'>
          <div> Home</div>
-               {props.count}/25 
+               {props.count}/{Data.length} 
          </header>
      )
  }

@@ -287,11 +287,11 @@
     },
     {
       id:26,
-      name: {first:null, last:null },
-      city:null,
-      country:null,
-      employer:null,
-      title:null,
+      name: {first:'null', last:'null' },
+      city:'null',
+      country:'null',
+      employer:'null',
+      title:'null',
       favoriteMovies: [
         null,
         null,
