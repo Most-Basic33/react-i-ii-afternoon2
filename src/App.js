@@ -48,11 +48,16 @@ class App extends Component {
       
     // })
    return (
-    <div>
+    <div className='app'>
+    <section className='body'>
+    <div className='app-container'>
       <Header count={counter} />
       <Card output={output}/>
       <button onClick={(e)=> this.handleClick(e)}>Switch People</button>
-       {/* <button onClick={(e)=>this.handleRemove(e) }>Remove People</button>  */}
+        <button onClick={(e)=>this.handleRemove(e) }>Remove People</button>  
+        </div>
+       </section>
+       
     </div>
   );
   }

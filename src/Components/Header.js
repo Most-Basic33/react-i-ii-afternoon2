@@ -4,8 +4,9 @@
      //console.log(props)
      return(
          
-         <header>
-             Home {props.count}/25 
+         <header className='headPiece'>
+         <div> Home</div>
+               {props.count}/25 
          </header>
      )
  }

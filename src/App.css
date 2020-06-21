@@ -6,11 +6,28 @@
   
   
 }
-
+.app{
+  background-color: blanchedalmond;
+  min-height: 100vh;
+  
+}
+.app-container{
+  width: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+.headPiece{
+  display: flex;
+  justify-content: space-between;
+}
 header{
   font-size: 5vh;
-  background-color: blue;
-  width: 62%;
+  background-color: skyblue;
+  width: 100%;
+  align-self: space-evenly;
 }
 h1{
   font-size: 3vh;
@@ -19,10 +36,15 @@ h1{
   text-decoration: underline;
 
 }
-.JSON{
+button{
+  background-color:blue;
+  color: white;
+  font-weight: 800;
+}
+.card{
   height:30vh;
   width: 60vh;
-  background-color: aqua;
+  background-color: white;
   flex-wrap: wrap;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
