@@ -3,12 +3,12 @@ import Data from './Data';
 
 
  const Header = (props) => {
-   //  console.log(Form.newPerson)
+    console.log(props.array)
      return(
          
          <header className='headPiece'>
          <div> Home</div>
-               {props.count}/{Data.length} 
+               {props.count}/{props.array.length} 
          </header>
      )
  }

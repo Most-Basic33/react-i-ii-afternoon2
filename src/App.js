@@ -22,7 +22,7 @@ class App extends Component {
   handleRemove=(id)=>{
     alert('Item deleted')
     const remove = this.state.array.filter(element => element.id !==id) 
-    //console.log(remove,'remove')
+    console.log(remove,'remove')
     this.setState({
       array:remove,
       counter:this.state.counter+1
@@ -34,25 +34,30 @@ class App extends Component {
        counter:this.state.counter+1
      })  
    }
-  
-  render() {
-    const { counter } = this.state
-    let output = [];
-    if(counter == Data.length){
+   componentDidUpdate(){
+     let {counter} = this.state
+    if(counter === Data.length){
       this.setState({
         counter: 1
       })
     }
-    output = (Data).filter((e, i, a) => e.id === this.state.counter)
+   }
+  
+  render() {
+    const { counter } = this.state
+    let output = [];
+   
+
+    output = (Data).filter((e, i, a) => e.id === counter)
     
    return (
     <div className='app'>
     <section className='body'>
     <div className='app-container'>
-      <Header count={counter} />
+      <Header count={counter} array={this.state.array} />
       <Card output={output}/>
       <button onClick={(e)=> this.handleClick(e)}>Switch People</button>
-        <button onClick={()=>this.handleRemove(this.state.counter) }>Remove People</button>  
+        <button onClick={()=>this.handleRemove(counter) }>Remove People</button>  
         </div>
         <Form counter={counter}/>
        </section>

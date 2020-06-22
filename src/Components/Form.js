@@ -4,7 +4,7 @@ class Form extends Component{
 constructor(props){
     super(props);
     this.state ={
-        id:Data.length,
+        id:props.counter,
         fname:'',lname:'',
         city:'',
         country:'',
@@ -22,7 +22,6 @@ addAppt=()=>{
     const movie = [this.state.favoriteMovies1,this.state.favoriteMovies2,this.state.favoriteMovies3]
 const {city,country,employer,title } = this.state
     const newArray = [...Data]
-   
     newArray.push({name,movie,city,country,employer,title})
     Data.push(newArray)
     console.log(newArray,"new array");
