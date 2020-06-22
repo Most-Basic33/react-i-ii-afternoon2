@@ -5,6 +5,7 @@ import Data from './Components/Data'
 import Card from './Components/Card'
 import Header from './Components/Header';
 import Form from './Components/Form';
+import Button from './Components/Button';
 
 
 
@@ -28,7 +29,11 @@ class App extends Component {
       counter:this.state.counter+1
     })
   }
-  
+  handleMinus=e=>{
+    this.setState({
+      counter:this.state.counter-1
+    })
+  }
     handleClick=(e)=>{
      this.setState({
        counter:this.state.counter+1
@@ -42,6 +47,9 @@ class App extends Component {
       })
     }
    }
+   handleEdit=(e)=>{
+    alert('You pressed Edit, it does nothing, holla!')
+}
   
   render() {
     const { counter } = this.state
@@ -56,9 +64,8 @@ class App extends Component {
     <div className='app-container'>
       <Header count={counter} array={this.state.array} />
       <Card output={output}/>
-      <button onClick={(e)=> this.handleClick(e)}>Switch People</button>
-        <button onClick={()=>this.handleRemove(counter) }>Remove People</button>  
         </div>
+        <Button handleEdit={this.handleEdit} handleMinus={this.handleMinus} handleClick={this.handleClick} handleRemove={this.handleRemove} counter={counter}/>
         <Form counter={counter}/>
        </section>
        

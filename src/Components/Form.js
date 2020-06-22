@@ -30,8 +30,7 @@ const {city,country,employer,title } = this.state
     })
 
 }
-//remove info as a parameter, and remove this.state from parmeter of addAppt
-//
+
 handleChage=(e)=>{
     console.log(e.target.value)
     this.setState({
@@ -124,7 +123,7 @@ render(){
                 value={this.state.name}
                 onChange={this.handleChage}
             />
-            <button>Add Person</button>
+            <button className='blued'>Add Person</button>
             {/* {console.log(this.state)}
             {console.log(this.state.newPerson)} */}
             

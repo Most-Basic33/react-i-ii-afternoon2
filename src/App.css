@@ -36,7 +36,21 @@ h1{
   text-decoration: underline;
 
 }
-button{
+.clear{
+  align-self: start;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+}
+.buttons{
+ background-color: black;
+ width: 70vh;
+ display: flex;
+ justify-content: space-between;
+  
+  
+}
+.blued{
   background-color:blue;
   color: white;
   font-weight: 800;
