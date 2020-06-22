@@ -65,7 +65,7 @@ h1{
 }
 .form{
   height: auto;
-  width: 60vh;
+  width: 70vh;
   display: flex;
   flex-direction: column;
   align-content: center;
